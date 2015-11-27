@@ -15,7 +15,7 @@ define('INC_ROOT', dirname(__DIR__));
 require INC_ROOT . '/vendor/autoload.php';
 
 // Create new container
-$container = new Container();
+$container = new Container(['settings' => ['displayErrorDetails' => true]]);
 
 // load our configuration
 $container['config'] = function($c) {
