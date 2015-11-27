@@ -16,12 +16,12 @@ $container = new Container(['settings' => ['displayErrorDetails' => true]]);
 
 // load our configuration
 $container['config'] = function($c) {
-	return new Config('../config/production.php');
+	return new Config('../app/config/production.php');
 };
 
 // setup our views
 $container['view'] = function ($c) {
-	$view = new Twig('../resources/views');
+	$view = new Twig('../app/views');
 	
 	$view->addExtension(new TwigExtension(
 		$c['router'],
