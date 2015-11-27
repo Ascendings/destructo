@@ -8,6 +8,8 @@ use \Slim\Views\TwigExtension;
 
 use \Noodlehaus\Config;
 
+use \Mailgun\Mailgun;
+
 // Autoload our stuff >:D
 require '../vendor/autoload.php';
 
@@ -38,6 +40,11 @@ $container['db'] = function($c) {
 		$c['config']->get('db.mysql.username'),
 		$c['config']->get('db.mysql.password')
 	);
+};
+
+// add mail to the app
+$container['mail'] = function($c) {
+	return new Mailgun($c['config']->get('services.mailgun.secret'));
 };
 
 // initialize our application
