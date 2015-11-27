@@ -31,6 +31,15 @@ $container['view'] = function ($c) {
 	return $view;
 };
 
+// connect to the database
+$container['db'] = function($c) {
+	return new PDO(
+		'mysql:host=' . $c['config']->get('db.mysql.host') . ';dbname=' . $c['config']->get('db.mysql.dname'),
+		$c['config']->get('db.mysql.username'),
+		$c['config']->get('db.mysql.password')
+	);
+};
+
 // initialize our application
 $app = new App($container);
 
