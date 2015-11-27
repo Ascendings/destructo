@@ -1,4 +1,4 @@
-{% extends 'templates/default.twig' %}
+{% extends 'templates/default.php' %}
 
 {% block content %}
 	<div class="row">
@@ -17,9 +17,8 @@
 							<textarea name="message" id="message" placeholder="Enter a message to your recipient" cols="30" rows="10"></textarea>
 						</label>
 					</div>
-					<div class="input-group">
-						<input type="submit" name="submit" class="button" value="Go!" />
-					</div>
+					
+					<button class="btn">Send</button>
 				</form>
 			</div>
 		</div>
