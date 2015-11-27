@@ -8,23 +8,20 @@ use \Slim\Views\TwigExtension;
 
 use \Noodlehaus\Config;
 
-// The app's root directory
-define('INC_ROOT', '..');
-
 // Autoload our stuff >:D
-require INC_ROOT . '/vendor/autoload.php';
+require '../vendor/autoload.php';
 
 // Create new container
 $container = new Container(['settings' => ['displayErrorDetails' => true]]);
 
 // load our configuration
 $container['config'] = function($c) {
-	return new Config(INC_ROOT . '/config/app.php');
+	return new Config('../config/app.php');
 };
 
 // setup our views
 $container['view'] = function ($c) {
-	$view = new Twig(INC_ROOT . '/resources/views');
+	$view = new Twig('../resources/views');
 	
 	$view->addExtension(new TwigExtension(
 		$c['router'],
@@ -35,7 +32,7 @@ $container['view'] = function ($c) {
 };
 
 // initialize our application
-$app = new App();
+$app = new App($container);
 
 // include our routes
 require_once 'routes.php';
