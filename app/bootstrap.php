@@ -16,7 +16,7 @@ $container = new Container(['settings' => ['displayErrorDetails' => true]]);
 
 // load our configuration
 $container['config'] = function($c) {
-	return new Config('../config/app.php');
+	return new Config('../config/production.php');
 };
 
 // setup our views
