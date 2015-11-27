@@ -9,7 +9,7 @@ use \Slim\Views\TwigExtension;
 use \Noodlehaus\Config;
 
 // The app's root directory
-define('INC_ROOT', dirname(__DIR__));
+define('INC_ROOT', '..');
 
 // Autoload our stuff >:D
 require INC_ROOT . '/vendor/autoload.php';
