@@ -64,7 +64,7 @@ $app->get('/message/{hash}', function($request, $response, $args) {
 	
 	// show the view
 	return $this->view->render($response, 'message/show.php', [
-		'message' => $message;
+		'message' => $message,
 	]);
 	
 })->setName('show');
