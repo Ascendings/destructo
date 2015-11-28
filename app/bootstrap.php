@@ -35,11 +35,14 @@ $container['view'] = function ($c) {
 
 // connect to the database
 $container['db'] = function($c) {
-	return new PDO(
-		'mysql:host=' . $c['config']->get('db.mysql.host') . ';dbname=' . $c['config']->get('db.mysql.dname'),
+	$db = new PDO(
+		'mysql:host=' . $c['config']->get('db.mysql.host') . ';dbname=' . $c['config']->get('db.mysql.dbname'),
 		$c['config']->get('db.mysql.username'),
 		$c['config']->get('db.mysql.password')
 	);
+
+	//$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	return $db;
 };
 
 // add mail to the app
