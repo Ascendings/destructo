@@ -25,7 +25,7 @@ $app->post('/post', function($request, $response, $args) use ($app) {
 		'message' => $params['message'],
 		'recipient' => $params['email'],
 	]);
-	
+
 	// send email to the recipient
 	$this->mail->sendMessage($this->config->get('services.mailgun.domain'), [
 		'from' => 'noreply@fieldprotocol.com',
