@@ -9,8 +9,10 @@
 
 /* Navbar styles */
 .navbar{
-  background-color: #e91e63;
+  background-color: #607d8b;
   border-radius: 0;
+  border-color: #607d8b;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 }
 .navbar-brand{
   font-family: 'Satisfy', cursive;
