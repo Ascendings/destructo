@@ -1,0 +1,19 @@
+/* get our font styles from Google */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Satisfy);
+
+/* default styles for all elements */
+*{
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Navbar styles */
+.navbar{
+  border-radius: 0;
+}
+.navbar-inner{
+  background-color: #e91e63;
+}
+.navbar-brand{
+  font-family: 'Satisfy', cursive;
+}
