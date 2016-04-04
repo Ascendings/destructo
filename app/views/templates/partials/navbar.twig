@@ -1,45 +1,38 @@
 <nav class="top-bar">
-
-  <!-- Top bar title -->
-  <div class="top-bar-title">
+  
+  <!-- Left content -->
+  <div class="top-bar-left">
     <a href="{{ path_for('home') }}">Destructo</a>
+    <ul class="menu">
+      <li>
+        <a href="https://www.fieldprotocol.com/">
+          <i class="fa fa-home"></i>&nbsp; Home
+        </a>
+      </li>
+      <li>
+        <a href="https://wiki.fieldprotocol.com/">
+          <i class="fa fa-book"></i>&nbsp; Wiki
+        </a>
+      </li>
+    </ul>
   </div>
   
-  <!-- Top bar content -->
-  <div>
-    <!-- Left content -->
-    <div class="top-bar-left">
-      <ul class="menu">
-        <li>
-          <a href="https://www.fieldprotocol.com/">
-            <i class="fa fa-home"></i>&nbsp; Home
-          </a>
-        </li>
-        <li>
-          <a href="https://wiki.fieldprotocol.com/">
-            <i class="fa fa-book"></i>&nbsp; Wiki
-          </a>
-        </li>
-      </ul>
-    </div>
-    
-    <!-- Right content -->
-    <div class="top-bar-right">
-      <ul class="menu">
-        <li>
-          <a href="">
-            <i class="fa fa-user"></i>&nbsp; Bucky
-          </a>
-          <ul class="menu vertical">
-            <li>
-              <a href="">
-                <i class="fa fa-sign-out"></i>&nbsp; Logout
-              </a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
+  <!-- Right content -->
+  <div class="top-bar-right">
+    <ul class="menu">
+      <li>
+        <a href="">
+          <i class="fa fa-user"></i>&nbsp; Bucky
+        </a>
+        <ul class="menu vertical">
+          <li>
+            <a href="">
+              <i class="fa fa-sign-out"></i>&nbsp; Logout
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
   </div>
   
 </nav>
