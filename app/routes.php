@@ -42,7 +42,7 @@ $app->post('/post', function($request, $response, $args) use ($app) {
 })->setName('send');
 
 // show a message
-$app->get('/message/{hash}', function($request, $response, $args) {
+$app->get('/message/view/{hash}', function($request, $response, $args) {
 
 	// build the query to find the message
 	$message = $this->db->prepare("
@@ -63,11 +63,11 @@ $app->get('/message/{hash}', function($request, $response, $args) {
 	$message = $message->fetch(PDO::FETCH_OBJ);
 
 	// show the view
-	return $this->view->render($response, 'message/show.twig', [
+	return $this->view->render($response, 'message/view.twig', [
 		'message' => $message,
 	]);
 
-})->setName('show');
+})->setName('message.view');
 
 // send a message
 $app->get('/message/new', function($request, $response, $args) {
