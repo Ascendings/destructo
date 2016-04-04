@@ -1,37 +1,41 @@
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
+<nav class="top-bar">
 
-    <!-- Logo -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
-        <i class="fa fa-bars"></i>
-      </button>
-      <a class="navbar-brand" href="{{ path_for('home') }}">Destructo</a>
-    </div>
-
-    <!-- collapsable menu -->
-    <div class="collapse navbar-collapse" id="topNavBar">
-      <ul class="nav navbar-nav">
-        <li class="">
-          <a href="https://www.fieldprotocol.com/">
-            <i class="fa fa-home"></i>&nbsp; Home
-          </a>
-        </li>
-        <li class="">
-          <a href="https://wiki.fieldprotocol.com/">
-            <i class="fa fa-book"></i>&nbsp; Wiki
-          </a>
-        </li>
-      </ul>
-
-      <ul class="nav navbar-nav navbar-right">
-        <li class="">
-          <a href="">
-            <i class="fa fa-sign-out"></i>&nbsp; Logout
-          </a>
-        </li>
-      </ul>
-    </div>
-
+  <!-- Top bar title -->
+  <div class="top-bar-title">
+    <a href="{{ path_for('home') }}">Destructo</a>
   </div>
+  
+  <!-- Top bar content -->
+  <div>
+    <!-- Left content -->
+    <ul class="top-bar-left">
+      <li>
+        <a href="https://www.fieldprotocol.com/">
+          <i class="fa fa-home"></i>&nbsp; Home
+        </a>
+      </li>
+      <li>
+        <a href="https://wiki.fieldprotocol.com/">
+          <i class="fa fa-book"></i>&nbsp; Wiki
+        </a>
+      </li>
+    </ul>
+    
+    <!-- Right content -->
+    <ul class="top-bar-right">
+      <li class="has-dropdown">
+        <a href="">
+          <i class="fa fa-user"></i>&nbsp; Bucky
+        </a>
+        <ul class="dropdown">
+          <li>
+            <a href=""
+              <i class="fa fa-sign-out"></i>&nbsp; Logout
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  
 </nav>
