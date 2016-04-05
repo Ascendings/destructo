@@ -29,13 +29,15 @@ body{
 
 .navbar-inverse .navbar-toggle,
 .navbar-inverse .navbar-brand,
-.navbar-inverse .navbar-nav > li > a{
+.navbar-inverse .navbar-nav > li > a,
+.dropdown-menu > li > a{
   color: #f0f0f0;
   transition: all 200ms ease-in-out;
 }
 .navbar-inverse .navbar-toggle:hover,
 .navbar-inverse .navbar-brand:hover,
-.navbar-inverse .navbar-nav > li:hover > a{
+.navbar-inverse .navbar-nav > li:hover > a,
+.dropdown-menu > li:hover > a{
   color: #fff;
   background-color: #5d4037;
 }
@@ -71,4 +73,15 @@ body{
 /* form styles */
 .destructo-form textarea{
   resize: vertical;
+}
+
+.destructo-form button{
+  padding: 10px 13px;
+  background-color: #795548;
+  color: #f0f0f0; 
+  transition: all 200ms ease-in-out;
+}
+.destructo-form button:hover{
+  background-color: #5d4037;
+  color: #fff; 
 }
