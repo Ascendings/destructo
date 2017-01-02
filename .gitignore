@@ -50,3 +50,7 @@ app/config/development.php
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Project dependencies #
+#########################
+vendor/
