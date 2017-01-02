@@ -18,18 +18,18 @@ $container = new Container(['settings' => ['displayErrorDetails' => true]]);
 
 // load our configuration
 $container['config'] = function($c) {
-	return new Config('../app/config/production.php');
+	return new Config('../app/config/config.php');
 };
 
 // setup our views
 $container['view'] = function ($c) {
 	$view = new Twig('../app/views');
-	
+
 	$view->addExtension(new TwigExtension(
 		$c['router'],
 		$c['config']->get('url')
 	));
-	
+
 	return $view;
 };
 
