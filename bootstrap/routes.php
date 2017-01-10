@@ -12,4 +12,4 @@ $app->get('/message/view/{hash}', MessageController::class . ':getView')->setNam
 
 // new messages routes
 $app->get('/message/new', MessageController::class . ':getNew')->setName('messages.new');
-$app->post('/message/new', MessageController::class . ':postNew');
+$app->post('/message/new', MessageController::class . ':postNew')->setName('messages.new.post');

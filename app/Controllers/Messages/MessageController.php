@@ -2,6 +2,8 @@
 
 namespace App\Controllers\Messages;
 
+use App\Controllers\Controller;
+
 // Message controller
 class MessageController extends Controller {
 
